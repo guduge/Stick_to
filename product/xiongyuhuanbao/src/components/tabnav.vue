@@ -1,13 +1,8 @@
 <template>
   <div class="menu-box">
-      <div class="top-menu">
         <img src="@/assets/logo.png" @click="goHome" class="zx_logo" />
-        <div @click="callme" class="right-menu-name">服务热线：18735173681</div>
-      </div>
-    <el-row :gutter="20">
-      <el-col :span="18">
-        <div class="grid-content bg-purple">
-          <div class="left-menu-box">
+        <div class="grid-content">
+           <div @click="callme" class="menu-phone">服务热线：18735173681</div>
             <div class="menus">
               <TopMenuItem title="网站首页" link="/home" />
               <TopMenuItem title="公司介绍" link="/introduce" />
@@ -15,10 +10,7 @@
               <TopMenuItem title="新闻中心" link="/news" />
               <TopMenuItem title="联系方式" link="/contact" />
             </div>
-          </div>
         </div>
-      </el-col>
-    </el-row>
   </div>
 </template>
 
@@ -54,18 +46,15 @@ export default {
   padding: 0 20px;
   box-sizing: border-box;
   height: 140px;
-}
-.top-menu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .zx_logo {
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
 }
 
 .menus {
@@ -74,35 +63,17 @@ export default {
   flex-direction: row;
   align-items: center;
 }
-
-.right-menu-avatar {
-  widows: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-
-.left-menu-box {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 70px;
-}
-
 .grid-content {
   border-radius: 4px;
-  min-height: 70px;
-}
-
-.right-menu {
+  min-height: 100px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  line-height: 70px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
-.right-menu-name {
+.menu-phone {
+  margin-left: 25px;
   padding: 10px 20px;
   font-size: 15px;
   font-family: Source Han Sans CN;
@@ -113,19 +84,5 @@ export default {
   border-radius: 20px;
   border: 1px solid rgba(50, 84, 167, 1);
   background: rgba(12, 27, 66, 0.7);
-}
-.right-menu-btn {
-  font-size: 12px;
-  font-family: FZXS12;
-  font-weight: 400;
-  color: rgba(116, 185, 255, 1);
-  line-height: 20px;
-  cursor: pointer;
-
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid;
-  border-image: linear-gradient(0deg, rgba(1, 94, 234, 1), rgba(0, 192, 250, 1))
-    1 1;
-  border-radius: 6px;
 }
 </style>
