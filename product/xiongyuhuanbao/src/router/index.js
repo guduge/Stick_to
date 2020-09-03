@@ -13,7 +13,7 @@ Vue.use(VueRouter);
 
 const routes = [
     {
-        path: '',
+        path: '/',
         component: Layout,
         children: [{
             path: '',

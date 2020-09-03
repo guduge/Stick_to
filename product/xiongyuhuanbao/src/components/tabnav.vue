@@ -4,7 +4,7 @@
         <div class="grid-content">
            <div @click="callme" class="menu-phone">服务热线：18735173681</div>
             <div class="menus">
-              <TopMenuItem title="网站首页" link="/home" />
+              <TopMenuItem title="网站首页" link="/" />
               <TopMenuItem title="公司介绍" link="/introduce" />
               <TopMenuItem title="供应产品" link="/product" />
               <TopMenuItem title="新闻中心" link="/news" />
