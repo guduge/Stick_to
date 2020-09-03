@@ -13,10 +13,10 @@ Vue.use(VueRouter);
 
 const routes = [
     {
-        path: '/home',
+        path: '',
         component: Layout,
         children: [{
-            path: '/home',
+            path: '',
             name: 'home',
             component: Home
         }]
@@ -28,6 +28,7 @@ const routes = [
             path: '',
             name: 'introduce',
             component: Introduce
+
         }]
     },
     {
@@ -60,7 +61,7 @@ const routes = [
 
 ]
 const router = new VueRouter({
-    mode: 'history',
+    // mode: 'history',
     routes: routes
 })
 export default router;
