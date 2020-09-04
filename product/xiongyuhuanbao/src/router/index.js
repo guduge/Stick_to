@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-
 import Layout from '@/layout';
 ///pages
 import Home from '@/pages/home/index';
