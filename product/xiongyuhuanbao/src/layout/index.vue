@@ -35,7 +35,7 @@
     <div class="xy_footer">
       <p>Copyright © 雄宇环保科技有限公司 版权所有</p>
       <p>联系电话： 18735173681 地址:山西省太原市小店区康宁街万马仕广场12层1214室</p>
-      <p></p>
+      <p class="step"></p>
     </div>
   </div>
 </template>
@@ -72,11 +72,12 @@ export default {
 </script>
 
 <style scope lang="less">
+* {
+    box-sizing: border-box;
+}
 .content {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  height: 100%;
   .van-tabbar {
     background: #fff !important;
   }
@@ -103,13 +104,16 @@ export default {
     }
   }
   .xy_footer {
+    box-sizing: border-box;
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
     align-items: center;
-    margin-bottom: 59px;
     background-color: #e2e2e2;
+    .step{
+      height: 59px;
+    }
   }
 }
 </style>

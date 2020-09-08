@@ -13,8 +13,6 @@
         <div class="font14 numberLine1 product-item-title">{{product.title}}</div>
       </van-grid-item>
     </van-grid>
-    <van-divider />
-    <van-divider />
   </div>
 </template>
 <script>

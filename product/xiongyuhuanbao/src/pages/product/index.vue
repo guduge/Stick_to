@@ -11,7 +11,6 @@
       :title="item.title"
       :thumb="item.picUrl"
     />
-    <van-divider />
   </div>
 </template>
 <script>
