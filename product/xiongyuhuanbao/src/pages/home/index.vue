@@ -2,8 +2,8 @@
   <div class="home-content">
     <div class="section-title">
       <div>最新供应</div>
-      <div class="color666">
-        <router-link to="/product">最新更多</router-link>
+      <div @click="toProduct" class="more">
+        最新更多
       </div>
     </div>
 
@@ -13,7 +13,7 @@
         <div class="font14 numberLine1 product-item-title">{{product.title}}</div>
       </van-grid-item>
     </van-grid>
-     <van-divider />
+    <van-divider />
     <van-divider />
   </div>
 </template>
@@ -62,7 +62,11 @@ export default {
       ],
     };
   },
-  methods: {},
+  methods: {
+    toProduct(){
+      this.$router.push('/product')
+    }
+  },
 };
 </script>
 
@@ -79,6 +83,9 @@ export default {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    .more {
+      color: #666666;
+    }
   }
   .product-item-title {
     margin-top: 10px;

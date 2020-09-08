@@ -12,7 +12,6 @@
       :thumb="item.picUrl"
     />
     <van-divider />
-    <van-divider />
   </div>
 </template>
 <script>
@@ -39,8 +38,6 @@ export default {
 .product-content {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  height: 100%;
   .section-title{
     padding: 10px;
     padding-bottom: 5px;

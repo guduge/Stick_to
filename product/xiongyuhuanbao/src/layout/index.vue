@@ -1,6 +1,6 @@
 <template>
   <div class="content">
-    <div class="top-logo">
+    <div class="top-logo" @click="company">
       <van-image radius="10" width="4rem" height="4rem" fit="contain" :src="logo" />
       <div class="logo-name">
         <p>雄宇环保科技有限公司</p>
@@ -8,7 +8,13 @@
       </div>
     </div>
     <div>
-      <van-notice-bar scrollable color="#1989fa" background="#ecf9ff" left-icon="volume-o" text="雄宇环保，宇宙第一，节能环保零污染，环保中的佼佼者，掌握核心科技" />
+      <van-notice-bar
+        scrollable
+        color="#1989fa"
+        background="#ecf9ff"
+        left-icon="volume-o"
+        text="雄宇环保，宇宙第一，节能环保零污染，环保中的佼佼者，掌握核心科技"
+      />
     </div>
     <div class="swipe-box">
       <van-swipe class="my-swipe" :height="bannerHeight" :autoplay="3000">
@@ -20,10 +26,17 @@
     <van-tabbar z-index="999" route>
       <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
       <van-tabbar-item replace to="/product" icon="search">产品</van-tabbar-item>
-      <van-tabbar-item replace to="/news" icon="friends-o">新闻</van-tabbar-item>
-      <van-tabbar-item replace to="/contact" icon="setting-o">联系</van-tabbar-item>
+      <van-tabbar-item replace to="/news" icon="label-o">新闻</van-tabbar-item>
+      <van-tabbar-item replace to="/contact" icon="phone-o">联系</van-tabbar-item>
     </van-tabbar>
-    <router-view></router-view>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <div class="xy_footer">
+      <p>Copyright © 雄宇环保科技有限公司 版权所有</p>
+      <p>联系电话： 18735173681 地址:山西省太原市小店区康宁街万马仕广场12层1214室</p>
+      <p></p>
+    </div>
   </div>
 </template>
 <script>
@@ -38,16 +51,21 @@ export default {
   data() {
     return {
       images: [banner1, banner2, banner3],
-      bannerHeight:150
+      bannerHeight: 150,
     };
   },
   mounted() {
     let clientWidth = document.body.clientWidth;
-    this.bannerHeight =  (clientWidth/375)*150;
+    this.bannerHeight = (clientWidth / 375) * 150;
   },
   computed: {
     logo() {
       return logo;
+    },
+  },
+  methods: {
+    company() {
+      this.$router.push("/company");
     },
   },
 };
@@ -59,7 +77,7 @@ export default {
   flex-direction: column;
   flex: 1;
   height: 100%;
-  .van-tabbar{
+  .van-tabbar {
     background: #fff !important;
   }
   .top-logo {
@@ -83,6 +101,15 @@ export default {
       line-height: 150px;
       text-align: center;
     }
+  }
+  .xy_footer {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 59px;
+    background-color: #e2e2e2;
   }
 }
 </style>
