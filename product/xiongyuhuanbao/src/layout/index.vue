@@ -8,7 +8,7 @@
       </div>
     </div>
     <div>
-      <van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="volume-o" text="雄宇环保，宇宙第一，节能环保零污染，环保中的佼佼者，掌握核心科技" />
+      <van-notice-bar scrollable color="#1989fa" background="#ecf9ff" left-icon="volume-o" text="雄宇环保，宇宙第一，节能环保零污染，环保中的佼佼者，掌握核心科技" />
     </div>
     <div class="swipe-box">
       <van-swipe class="my-swipe" :height="bannerHeight" :autoplay="3000">
@@ -17,7 +17,7 @@
         </van-swipe-item>
       </van-swipe>
     </div>
-    <van-tabbar route>
+    <van-tabbar z-index="999" route>
       <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
       <van-tabbar-item replace to="/product" icon="search">产品</van-tabbar-item>
       <van-tabbar-item replace to="/news" icon="friends-o">新闻</van-tabbar-item>
@@ -59,6 +59,9 @@ export default {
   flex-direction: column;
   flex: 1;
   height: 100%;
+  .van-tabbar{
+    background: #fff !important;
+  }
   .top-logo {
     display: flex;
     flex-direction: row;

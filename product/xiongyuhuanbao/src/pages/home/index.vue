@@ -13,6 +13,8 @@
         <div class="font14 numberLine1 product-item-title">{{product.title}}</div>
       </van-grid-item>
     </van-grid>
+     <van-divider />
+    <van-divider />
   </div>
 </template>
 <script>
@@ -70,8 +72,6 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  flex: 1;
   .section-title {
     padding: 10px;
     width: 100%;
