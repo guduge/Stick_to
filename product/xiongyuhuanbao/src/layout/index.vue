@@ -7,10 +7,13 @@
         <p>xiong yu huan bao ltd</p>
       </div>
     </div>
+    <div>
+      <van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="volume-o" text="雄宇环保，宇宙第一，节能环保零污染，环保中的佼佼者，掌握核心科技" />
+    </div>
     <div class="swipe-box">
-      <van-swipe class="my-swipe" height="150" :autoplay="3000">
+      <van-swipe class="my-swipe" :height="bannerHeight" :autoplay="3000">
         <van-swipe-item v-for="(image, index) in images" :key="index">
-          <van-image height="150" fit="fill" :src="image"/>
+          <van-image :height="bannerHeight" fit="cover" :src="image" />
         </van-swipe-item>
       </van-swipe>
     </div>
@@ -34,12 +37,13 @@ import banner3 from "@/assets/banner/113.jpg";
 export default {
   data() {
     return {
-      images: [
-        banner1,
-        banner2,
-        banner3
-      ],
+      images: [banner1, banner2, banner3],
+      bannerHeight:150
     };
+  },
+  mounted() {
+    let clientWidth = document.body.clientWidth;
+    this.bannerHeight =  (clientWidth/375)*150;
   },
   computed: {
     logo() {

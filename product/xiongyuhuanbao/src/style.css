@@ -1,13 +1,36 @@
-body{
-    margin: 0!important;
+html,body{
+    margin: 0 !important;
     padding: 0 !important;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
-p {
+* {
+    box-sizing: border-box;
+}
+
+p{
     font-size: 14px;
     color: #333333;
     padding: 0;
     margin: 0;
+}
+div {
+    font-size: 14px; 
+}
+.font14 {
+    font-size: 14px;
+}
+.numberLine1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*设置成弹性盒子 */
+    display: -webkit-box;
+    /*显示的个数 */
+    -webkit-line-clamp: 1;
+    /* 属性规定框的子元素应该被水平或垂直排列。 */
+    -webkit-box-orient: vertical;
+}
+.color666{
+    color: #666666;
 }
