@@ -13,16 +13,33 @@
         <div class="info-content">
           <h1 class="name">山西雄宇环保科技有限公司</h1>
           <p class="ind">电气机械/器材制造</p>
-          <p class="prop">民营</p>
-          <p class="scale">20人以下</p>
+          <!-- <p class="prop">民营</p>
+          <p class="scale">20人以下</p> -->
         </div>
       </div>
       <div class="companyAdd boxsizing">
-        <p class="tit">公司地址</p>
+        <p class="tit">联系我们</p>
         <div class="add">
-          <i class="i_city"></i>
-          <span>山西省太原市小店区康宁街万马仕广场12层1214室</span>
+          <van-icon name="location-o" class="icon"/>
+          <span>地址：山西省太原市小店区康宁街万马仕广场12层1214室</span>
         </div>
+        <div class="add">
+          <van-icon name="envelop-o" class="icon" />
+          <span>邮箱：<a href="mailto:10642975897@qq.com">1064297589@qq.com</a></span>
+        </div>
+        <div class="add">
+          <van-icon name="user-circle-o" class="icon" />
+          <span>联系人：张世雄（先生）</span>
+        </div>
+        <div class="add">
+          <van-icon name="phone-o" class="icon" />
+          <span>手机号：<a href="tel:18735173681">18735173681</a></span>
+        </div>
+        <div class="add">
+          <van-icon name="chat-o" class="icon" />
+          <span>微信号：nt18735173681</span>
+        </div>
+        
       </div>
       <div class="company-box boxsizing">
         <p class="tit">公司描述</p>
@@ -54,7 +71,7 @@ export default {
 };
 </script>
 
-<style scope  >
+<style scope  lang="less">
 .contact-content {
   background: #f5f5f5;
 }
@@ -123,23 +140,25 @@ export default {
   font-size: 16px;
   color: #333;
 }
+a:link {
+  color: lightblue;
+}
+a:visited {
+  color: #888888;
+}
 .companyAdd .add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   position: relative;
-  padding-left: 18px;
+  padding-left: 10px;
   line-height: 20px;
   font-size: 14px;
   color: #888;
+  margin-bottom: 5px;
 }
-.companyAdd .add .i_city {
-  display: inline-block;
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  width: 12px;
-  height: 15px;
-  background: url(//img09.zhaopin.cn/2012/other/mobile/m/7.0icon/job_address.png)
-    no-repeat;
-  background-size: 12px 15px;
+.companyAdd .add .icon {
+  margin-right: 5px;
 }
 .company-box {
   padding: 16px 12px;

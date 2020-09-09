@@ -1,5 +1,21 @@
 <template>
   <div class="home-content">
+    <div>
+      <van-notice-bar
+        scrollable
+        color="#1989fa"
+        background="#ecf9ff"
+        left-icon="volume-o"
+        text="雄宇环保，宇宙第一，节能环保零污染，环保中的佼佼者，掌握核心科技"
+      />
+    </div>
+    <div class="swipe-box">
+      <van-swipe class="my-swipe" :height="bannerHeight" :autoplay="3000">
+        <van-swipe-item v-for="(image, index) in images" :key="index">
+          <van-image :height="bannerHeight" fit="cover" :src="image" />
+        </van-swipe-item>
+      </van-swipe>
+    </div>
     <div class="section-title">
       <div>最新供应</div>
       <div @click="toProduct" class="more">
@@ -13,13 +29,19 @@
         <div class="font14 numberLine1 product-item-title">{{product.title}}</div>
       </van-grid-item>
     </van-grid>
+    <div class="space"></div>
   </div>
 </template>
 <script>
+import banner1 from "@/assets/banner/111.jpg";
+import banner2 from "@/assets/banner/112.jpg";
+import banner3 from "@/assets/banner/113.jpg";
 export default {
   components: {},
   data() {
     return {
+      images: [banner1, banner2, banner3],
+      bannerHeight: 150,
       newProducts: [
         {
           id: "20200907001",
@@ -60,6 +82,10 @@ export default {
       ],
     };
   },
+  mounted(){
+    let clientWidth = document.body.clientWidth;
+    this.bannerHeight = (clientWidth / 375) * 150;
+  },
   methods: {
     toProduct(){
       this.$router.push('/product')
@@ -74,6 +100,14 @@ export default {
   width: 100%;
   display: flex;
   flex-direction: column;
+  .swipe-box {
+    .my-swipe .van-swipe-item {
+      color: #fff;
+      font-size: 20px;
+      line-height: 150px;
+      text-align: center;
+    }
+  }
   .section-title {
     padding: 10px;
     width: 100%;
@@ -87,6 +121,9 @@ export default {
   }
   .product-item-title {
     margin-top: 10px;
+  }
+  .space{
+    height: 20px;
   }
 }
 </style>

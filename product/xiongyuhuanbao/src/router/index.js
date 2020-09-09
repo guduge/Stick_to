@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Layout from '@/layout';
+import TabBar from '@/layout';
 import Nav from '@/components/nav'
 ///pages
 import Home from '@/pages/home/index';
@@ -15,7 +15,7 @@ Vue.use(VueRouter);
 const routes = [
     {
         path: '/',
-        component: Layout,
+        component: TabBar,
         children: [{
             path: '',
             name: 'home',
@@ -24,7 +24,7 @@ const routes = [
     },
     {
         path: '/introduce',
-        component: Layout,
+        component: TabBar,
         children: [{
             path: '',
             name: 'introduce',
@@ -34,7 +34,7 @@ const routes = [
     },
     {
         path: '/product',
-        component: Layout,
+        component: TabBar,
         children: [{
             path: '',
             name: 'product',
@@ -43,7 +43,7 @@ const routes = [
     },
     {
         path: '/news',
-        component: Layout,
+        component: TabBar,
         children: [{
             path: '',
             name: 'news',
@@ -51,23 +51,24 @@ const routes = [
         }]
     },
     {
-        path: '/contact',
-        component: Layout,
-        children: [{
-            path: '',
-            name: 'contact',
-            component: Contact
-        }]
-    },
-    {
         path: '/company',
-        component: Nav,
+        component: TabBar,
         children: [{
             path: '',
             name: 'company',
             component: Company
         }]
     },
+    {
+        path: '/contact',
+        component: Nav,
+        children: [{
+            path: '',
+            name: 'contact',
+            component: Contact
+        }]
+    },
+    
 
     // {
     //     path: '/company',
