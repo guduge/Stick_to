@@ -4,8 +4,16 @@
   </div>
 </template>
 <script>
+import Vue from 'vue';
+import { ImagePreview } from 'vant';
+
+// 全局注册
+Vue.use(ImagePreview);
+
 export default {
-  components: {},
+  components: {
+    [ImagePreview.Component.name]: ImagePreview.Component,
+  },
   data() {
     return {
       content:
@@ -14,7 +22,14 @@ export default {
   },
   methods: {
     getImg($event) {
-      console.log($event);
+    //   console.log($event);
+        ImagePreview({
+        images:[
+        $event.target.currentSrc
+        ],
+        showIndex:false
+     })
+      
     },
     sureActon() {
       console.log(this.content);
