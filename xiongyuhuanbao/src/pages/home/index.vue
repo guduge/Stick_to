@@ -24,7 +24,7 @@
     </div>
 
     <van-grid :border="true" gutter="10" :column-num="3">
-      <van-grid-item v-for="product in newProducts" :key="product.id">
+      <van-grid-item @click="toDetail" v-for="product in newProducts" :key="product.id">
         <van-image :src="product.picUrl" />
         <div class="font14 numberLine1 product-item-title">{{product.title}}</div>
       </van-grid-item>
@@ -89,6 +89,10 @@ export default {
   methods: {
     toProduct(){
       this.$router.push('/product')
+    },
+    toDetail(e){
+      console.log(e);
+      this.$router.push('/detail');
     }
   },
 };

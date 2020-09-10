@@ -3,13 +3,15 @@ import VueRouter from 'vue-router'
 
 import TabBar from '@/layout';
 import Nav from '@/components/nav'
+import NavInfo from '@/components/navInfo'
 ///pages
 import Home from '@/pages/home/index';
 import Introduce from '@/pages/introduce/index';
 import Product from '@/pages/product/index';
 import Contact from '@/pages/contact/index';
 import News from '@/pages/news/index';
-import Company from '@/pages/contact/company'
+import Company from '@/pages/contact/company';
+import Detail from '@/pages/detail/detail';
 Vue.use(VueRouter);
 
 const routes = [
@@ -66,6 +68,15 @@ const routes = [
             path: '',
             name: 'contact',
             component: Contact
+        }]
+    },
+    {
+        path: '/detail',
+        component: NavInfo,
+        children: [{
+            path: '',
+            name: 'detail',
+            component: Detail
         }]
     },
     
