@@ -1,21 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import TabBar from '@/layout';
-import Nav from '@/components/nav'
+
+import Layout from '@/layout';
 ///pages
 import Home from '@/pages/home/index';
 import Introduce from '@/pages/introduce/index';
 import Product from '@/pages/product/index';
 import Contact from '@/pages/contact/index';
 import News from '@/pages/news/index';
-import Company from '@/pages/contact/company'
 Vue.use(VueRouter);
 
 const routes = [
     {
         path: '/',
-        component: TabBar,
+        component: Layout,
         children: [{
             path: '',
             name: 'home',
@@ -24,7 +23,7 @@ const routes = [
     },
     {
         path: '/introduce',
-        component: TabBar,
+        component: Layout,
         children: [{
             path: '',
             name: 'introduce',
@@ -34,7 +33,7 @@ const routes = [
     },
     {
         path: '/product',
-        component: TabBar,
+        component: Layout,
         children: [{
             path: '',
             name: 'product',
@@ -43,7 +42,7 @@ const routes = [
     },
     {
         path: '/news',
-        component: TabBar,
+        component: Layout,
         children: [{
             path: '',
             name: 'news',
@@ -51,31 +50,14 @@ const routes = [
         }]
     },
     {
-        path: '/company',
-        component: TabBar,
-        children: [{
-            path: '',
-            name: 'company',
-            component: Company
-        }]
-    },
-    {
         path: '/contact',
-        component: Nav,
+        component: Layout,
         children: [{
             path: '',
             name: 'contact',
             component: Contact
         }]
     },
-    
-
-    // {
-    //     path: '/company',
-    //     name: 'company',
-    //     component: Company
-    // },
-
 
 ]
 const router = new VueRouter({

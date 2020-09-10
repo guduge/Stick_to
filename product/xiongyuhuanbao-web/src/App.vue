@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     <!-- 留坑，非常重要 -->
     <keep-alive>
       <router-view></router-view>
@@ -8,15 +8,16 @@
 </template>
 <script>
 export default {
-  name: 'app',
-  components: {
-    
+  data() {
+    return {};
   }
-}
+};
 </script>
 
-<style>
-html,body,#app{
-  height: 100%;
+<style scoped>
+body {
+  background: #111B46;
+  margin: 0;
+  padding: 0;
 }
 </style>
