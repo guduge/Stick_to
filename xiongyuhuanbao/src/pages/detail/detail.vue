@@ -1,15 +1,11 @@
 <template>
   <div class="detail-box" @click="getImg($event)">
+      <img class="myImg" src="https://tianhaojiebucket1.oss-cn-beijing.aliyuncs.com/xylogo.jpeg?Expires=1599735608&OSSAccessKeyId=TMP.3KhvppsCJwwtVbv4ic2RB6bNCGk5mFQ9NXkzd6ap5pM1gUvJvdvYL4qSeQceqGUN8z57V6DcoJZFxSjmBewmBdYVPYstSh&Signature=hedOYP6S%2BMwQ3tECAvVH7T9efAQ%3D" />
     <div v-html="content"></div>
   </div>
 </template>
 <script>
-import Vue from 'vue';
-import { ImagePreview } from 'vant';
-
-// 全局注册
-Vue.use(ImagePreview);
-
+import { ImagePreview } from "vant";
 export default {
   components: {
     [ImagePreview.Component.name]: ImagePreview.Component,
@@ -22,14 +18,14 @@ export default {
   },
   methods: {
     getImg($event) {
-    //   console.log($event);
-        ImagePreview({
-        images:[
-        $event.target.currentSrc
-        ],
-        showIndex:false
-     })
-      
+      if ($event.target) {
+        if ($event.target.nodeName === "IMG") {
+          ImagePreview({
+            images: [$event.target.currentSrc],
+            showIndex: false,
+          });
+        }
+      }
     },
     sureActon() {
       console.log(this.content);
@@ -38,9 +34,17 @@ export default {
 };
 </script>
 
-<style scope>
+<style scope >
 .detail-box {
   width: 100%;
-  height: 100%;
+  background-color: white;
+}
+.detail-box >>> img {
+  max-width: 100%;
+  height: auto;
+}
+.myImg{
+    width: 140px;
+    height: 140px;
 }
 </style>

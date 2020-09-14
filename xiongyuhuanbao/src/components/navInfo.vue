@@ -40,7 +40,6 @@ export default {
     box-sizing: border-box;
 }
 .content-nav {
-    
   display: flex;
   flex-direction: column;
   position: relative;
@@ -85,6 +84,13 @@ export default {
     background-color: #e2e2e2;
     .step{
       height: 59px;
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .content-nav {
+    .top-logo {
+      width: 800px;
     }
   }
 }

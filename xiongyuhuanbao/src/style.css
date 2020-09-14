@@ -1,9 +1,28 @@
-html,body{
+html{
     margin: 0 !important;
     padding: 0 !important;
+    position: relative;
     display: flex;
+    height: 100%;
+    width: 100%;
+    background: #666666;
     flex-direction: column;
-    flex: 1;
+    align-items: center;
+}
+body{
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: #FFFFFF;
+    flex-direction: column;
+}
+@media screen and (min-width: 800px) {
+    body {
+        width: 800px;
+    }
 }
 * {
     box-sizing: border-box;

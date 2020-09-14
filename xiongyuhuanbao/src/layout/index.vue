@@ -7,19 +7,23 @@
         <p>xiong yu huan bao ltd</p>
       </div>
     </div>
-    <van-tabbar z-index="999" route>
-      <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
-      <van-tabbar-item replace to="/product" icon="search">产品</van-tabbar-item>
-      <van-tabbar-item replace to="/news" icon="label-o">新闻</van-tabbar-item>
-      <van-tabbar-item replace to="/company" icon="phone-o">联系</van-tabbar-item>
-    </van-tabbar>
+
     <keep-alive>
       <router-view></router-view>
     </keep-alive>
+
     <div class="xy_footer">
       <p>Copyright © 雄宇环保科技有限公司 版权所有</p>
       <p>联系电话： 18735173681 地址:山西省太原市小店区康宁街万马仕广场12层1214室</p>
       <p class="step"></p>
+    </div>
+    <div class="tab-box">
+      <van-tabbar z-index="999" route :fixed="false">
+        <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+        <van-tabbar-item replace to="/product" icon="search">产品</van-tabbar-item>
+        <van-tabbar-item replace to="/news" icon="label-o">新闻</van-tabbar-item>
+        <van-tabbar-item replace to="/company" icon="phone-o">联系</van-tabbar-item>
+      </van-tabbar>
     </div>
   </div>
 </template>
@@ -31,8 +35,7 @@ import logo from "@/assets/logo.png";
 
 export default {
   data() {
-    return {
-    };
+    return {};
   },
   computed: {
     logo() {
@@ -49,14 +52,23 @@ export default {
 
 <style scope lang="less">
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 .content {
   display: flex;
   flex-direction: column;
-  .van-tabbar {
-    background: #fff !important;
+  background-color: white;
+  position: relative;
+  .tab-box {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    .van-tabbar {
+      background: #fff !important;
+    }
   }
+
   .top-logo {
     display: flex;
     flex-direction: row;
@@ -79,6 +91,7 @@ export default {
       text-align: center;
     }
   }
+
   .xy_footer {
     box-sizing: border-box;
     padding: 10px 20px;
@@ -87,8 +100,15 @@ export default {
     width: 100%;
     align-items: center;
     background-color: #e2e2e2;
-    .step{
+    .step {
       height: 59px;
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .content {
+    .tab-box {
+      width: 800px;
     }
   }
 }

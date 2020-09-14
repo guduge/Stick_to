@@ -65,6 +65,7 @@ export default {
 
 <style scope>
 .news-content {
+  background: white;
   padding-top: 20px;
   width: 100%;
   display: flex;
