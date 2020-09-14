@@ -33,14 +33,14 @@
   </div>
 </template>
 <script>
-import banner1 from "@/assets/banner/111.jpg";
+import banner0 from "@/assets/banner/110.jpg"
+import banner1 from "@/assets/banner/111.png";
 import banner2 from "@/assets/banner/112.jpg";
-import banner3 from "@/assets/banner/113.jpg";
 export default {
   components: {},
   data() {
     return {
-      images: [banner1, banner2, banner3],
+      images: [banner0,banner1,banner2],
       bannerHeight: 150,
       newProducts: [
         {

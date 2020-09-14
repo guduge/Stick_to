@@ -22,6 +22,7 @@ export default {
         {linkUrl:"https://mp.weixin.qq.com/s/05yA46IOAxQez9PnnU9gVg",label:"【干货】氯化物的测定"},
         {linkUrl:"https://mp.weixin.qq.com/s/Pv589zrbrHa4uft-AGnzHQ",label:"【干货】硬度的测定"},
         {linkUrl:"https://mp.weixin.qq.com/s/fdqpZV7zM0EXdHFFHq21Pg",label:"【干货】锅炉运行水质指标"},
+        {linkUrl:"https://mp.weixin.qq.com/s/TytWL0xhDcJLGSncuz9lzQ",label:"锅炉的基础知识——带你走进供暖的世界"},
         {linkUrl:"https://mp.weixin.qq.com/s/C7rtdK17RZShsZf0qoQMXA",label:"锅炉如何实现低氮排放？"},
         {linkUrl:"https://mp.weixin.qq.com/s/x5lN_uptH5osClmpBLTVMw",label:"低氮燃烧器选择考虑的主要参数"},
         {linkUrl:"https://mp.weixin.qq.com/s/uuJsA5vFJSC2eULeVRtuAQ",label:"对比 | 全预混冷凝锅炉 VS 普通锅炉"},
